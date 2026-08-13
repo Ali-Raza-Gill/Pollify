@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pollify - Backend ● API </title>
+  <style>
+    body {font-family: system-ui, -apple-system, sans-serif; background:#f9f9fb; margin:0; padding:2rem;}
+    .container {max-width: 720px; margin:auto;}
+    .header {display:flex; align-items:center; gap:1rem; margin-bottom:2rem;}
+    .logo {background:#1a1a1a; color:#fff; width:48px; height:48px; border-radius:50%; display:flex;
+            align-items:center; justify-content:center; font-weight:bold; font-size:1.2rem;}
+    .title {font-size:1.8rem; font-weight:600; margin:0;}
+    .subtitle {color:#555; margin-top:.3rem;}
+    .card {background:#fff; border-radius:12px; padding:1.5rem; box-shadow:0 2px 8px rgba(0,0,0,.05);}
+    .status {display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;}
+    .badge {background:#e6f7f0; color:#0c6; padding:.35rem .75rem; border-radius:2rem; font-weight:500;}
+    .badge.running {background:#e6f7f0; color:#0c6;}
+    .info {line-height:1.7; color:#333;}
+    .footer {text-align:center; margin-top:3rem; color:#888; font-size:.85rem;}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="logo">Pol</div>
+      <div>
+        <h1 class="title">Pollify — Backend</h1>
+        <p class="subtitle">A clean API surface with versioned base URL</p>
+      </div>
+    </header>
+
+    <section class="card">
+      <div class="status">
+        <strong>Server Status</strong>
+        <span class="badge running">● Running</span>
+      </div>
+
+      <div class="info">
+        <div><strong>Environment:</strong> <%= env %></div>
+        <div><strong>Timestamp:</strong> <%= timestamp %></div>
+        <div><strong>Database:</strong> <%= db %></div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      © <%= new Date().getFullYear() %> Pollify-Backend. All rights reserved.
+    </footer>
+  </div>
+</body>
+</html>
